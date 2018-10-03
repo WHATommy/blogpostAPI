@@ -33,7 +33,7 @@ router.delete('/:id', (req, res) => {
     res.status(204).end();
 });
 
-router.put('/:id', jsonParser, (req, res) => {
+router.put(':id', jsonParser, (req, res) => {
     const requiredFields = ['title', 'content', 'author', 'publishDate', 'id'];
     for(i = 0; i < requiredFields.length; i++) {
         let field = requiredFields[i];
